@@ -8,7 +8,7 @@ metadata:
     tier: db
     project: expense
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mysql
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: lakshman045/mysql:{{ .Values.deployment.imageVerion }}
+        image: lakshman045/mysql:{{ .Values.deployment.imageVersion }}
 ---
 kind: Service
 apiVersion: v1
